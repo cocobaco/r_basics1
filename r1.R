@@ -55,7 +55,6 @@ y=sin(x)
 plot(x,y,col='red')
 
 #------ indexing data -----
-
 A=matrix(1:16,4,4)
 A
 dim(A)
@@ -67,3 +66,14 @@ A[,1:2]
 A[1,]
 A[-c(1,3),]
 A[-c(1,3),-c(1,3,4)]
+
+#------- loading data --------
+Auto = read.table('Auto.data', header=TRUE)
+head(Auto)
+dim(Auto)
+names(Auto)
+plot(Auto$weight, Auto$mpg, col='red')
+hist(Auto$mpg, breaks=20, col=2)
+pairs(~ mpg + horsepower + weight + acceleration, Auto)
+summary(Auto)
+summary(Auto$mpg)
