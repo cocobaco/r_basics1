@@ -52,7 +52,7 @@ plot(x, y, type='b', col='green',
 hist(z, breaks=30)
 x=seq(-pi, pi, length=50)
 y=sin(x)
-plot(x,y,col='red')
+plot(x,y,col='red', pch=4)
 
 #------ indexing data -----
 A=matrix(1:16,4,4)
